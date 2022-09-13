@@ -1,0 +1,26 @@
+{
+  "name": "hmi-delivery-site",
+  "version": "1.0.0",
+  "description": "Project of Typescript with React and lerna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lerna run build",
+    "link": "lerna link --force-local",
+    "start-web": "lerna run start",
+    "install-all": "npm install && lerna exec --scope hmi-core -- yarn && lerna exec --scope hmi-web -- npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/hmi-core",
+    "packages/hmi-web"
+  ],
+  "devDependencies": {
+    "lerna": "^5.4.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}
